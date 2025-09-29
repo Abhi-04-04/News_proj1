@@ -3,6 +3,13 @@ import streamlit as st
 from predict import predictions
 import pandas as pd
 
+# Load training data
+train_data_path = 'training_data/labeled_headlines.csv'
+train_df = pd.read_csv(train_data_path)
+
+# Display the first few rows of the dataset
+train_df.head()
+
 st.title("Real-Time News Sentiment Analysis")
 
 # Convert Spark DataFrame to Pandas for display
